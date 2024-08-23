@@ -11,7 +11,9 @@ import SwiftUI
 struct RemindersCloneApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                MyListsScreen()
+            }.modelContainer(for: MyList.self)
         }
     }
 }
